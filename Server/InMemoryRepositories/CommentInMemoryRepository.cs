@@ -6,7 +6,7 @@ namespace InMemoryRepositories;
 public class CommentInMemoryRepository : ICommentRepository
 {
     private readonly List<Comment> comments = new();
-    
+
     public CommentInMemoryRepository()
     {
         comments.Add(new Comment
@@ -20,9 +20,17 @@ public class CommentInMemoryRepository : ICommentRepository
         comments.Add(new Comment
         {
             Id = 2,
-            Body = "This is the new Facebook.",
+            Body = "LINQ is very useful.",
             UserId = 1,
             PostId = 2
+        });
+
+        comments.Add(new Comment
+        {
+            Id = 3,
+            Body = "Nice post!",
+            UserId = 3,
+            PostId = 1
         });
     }
 

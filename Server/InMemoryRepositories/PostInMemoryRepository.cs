@@ -1,4 +1,3 @@
-using System.Reflection.Metadata;
 using Entities;
 using RepositoryContracts;
 
@@ -7,7 +6,7 @@ namespace InMemoryRepositories;
 public class PostInMemoryRepository : IPostRepository
 {
     private readonly List<Post> posts = new();
-    
+
     public PostInMemoryRepository()
     {
         posts.Add(new Post
@@ -21,12 +20,20 @@ public class PostInMemoryRepository : IPostRepository
         posts.Add(new Post
         {
             Id = 2,
-            Title = "Question about this",
-            Body = "How does this work?",
+            Title = "Question about C#",
+            Body = "How does LINQ work?",
             UserId = 2
         });
+
+        posts.Add(new Post
+        {
+            Id = 3,
+            Title = "Forum test post",
+            Body = "This is another test post.",
+            UserId = 3
+        });
     }
-    
+
     public Task<Post> AddAsync(Post post)
     {
         post.Id = posts.Any()

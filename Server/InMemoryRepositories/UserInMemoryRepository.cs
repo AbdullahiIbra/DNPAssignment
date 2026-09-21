@@ -6,21 +6,28 @@ namespace InMemoryRepositories;
 public class UserInMemoryRepository : IUserRepository
 {
     private readonly List<User> users = new();
-    
+
     public UserInMemoryRepository()
     {
         users.Add(new User
         {
             Id = 1,
-            UserName = "Abdullahi",
-            Password = "1999"
+            UserName = "Alice",
+            Password = "1234"
         });
 
         users.Add(new User
         {
             Id = 2,
-            UserName = "Sumeya",
-            Password = "2003"
+            UserName = "Bob",
+            Password = "5678"
+        });
+
+        users.Add(new User
+        {
+            Id = 3,
+            UserName = "Charlie",
+            Password = "abcd"
         });
     }
 
