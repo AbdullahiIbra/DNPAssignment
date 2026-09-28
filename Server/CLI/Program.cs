@@ -1,15 +1,15 @@
 ﻿using CLI.UI;
-using InMemoryRepositories;
+using FileRepositories;
 using RepositoryContracts;
 
 IUserRepository userRepository =
-    new UserInMemoryRepository();
+    new UserFileRepository();
 
 IPostRepository postRepository =
-    new PostInMemoryRepository();
+    new PostFileRepository();
 
 ICommentRepository commentRepository =
-    new CommentInMemoryRepository();
+    new CommentFileRepository();
 
 CliApp cliApp = new CliApp(
     userRepository,
